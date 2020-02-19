@@ -1,0 +1,165 @@
+Путь:  		C:\Server\data\htdocs\blog
+Адрес: 	
+	http://127.0.0.1:8000
+
+
+CodeSniffer:	
+Ctrl+Alt+L
+
+******************************************************************
+*****         Запуск php файла и composera исходник:         *****
+******************************************************************
+C:\Server\bin\PHP\php.exe composer.phar
+
+
+
+
+**************************************************************
+*****			Запуск artisan:			******
+**************************************************************
+C:\Server\bin\PHP\php.exe artisan
+
+***********************************************************************
+*****                   Установить новый проект                   *****
+***********************************************************************
+C:\Server\bin\PHP\php.exe composer.phar create-project laravel/laravel <Название проекта>
+
+***********************************************************************
+**    Установить debugbar (в папке, где находится composer.json)     **
+***********************************************************************
+C:\Server\bin\PHP\php.exe composer.phar require barryvdh/laravel-debugbar --dev
+
+**************************************************************
+**     Создаем контроллер с именем класса CreatePlaces:     **
+**************************************************************
+C:\Server\bin\PHP\php.exe artisan make:controller CreatePlaces
+
+***************************************************************************
+*****     Обновить папку vendor, подтянет данные из composer.json     *****
+***************************************************************************
+C:\Server\bin\PHP\php.exe composer.phar update
+
+***************************************************************************
+*****     Установить авторизацию, аналог make:auth в версиях 6.x      *****
+***************************************************************************
+1) C:\Server\bin\PHP\php.exe composer.phar require laravel/ui
+2) C:\Server\bin\PHP\php.exe artisan ui vue —auth
+
+****************************************************
+*****             Команды Artisan:             *****
+****************************************************
+
+Доступные команды:
+  clear-compiled       Удалить скомпилированный файл класса
+  up                   Вывести приложение из режима обслуживания
+  down                 Переведите приложение в режим обслуживания
+  env                  Показать текущую среду фреймворка
+  help                 Отображение справки для команды
+  inspire              Показать вдохновляющую цитату
+  list                 Списки команд
+  migrate              Запустить миграцию базы данных
+  optimize             Кэшируйте файлы начальной загрузки фреймворка
+  preset               Swap the front-end scaffolding for the application
+  serve                Обслуживание приложения на сервере разработки PHP
+  tinker               Взаимодействовать с вашим приложением 
+
+ auth
+  auth:clear-resets    Сбросить просроченные токены для сброса пароля
+
+ cache
+  cache:clear          Очистить кеш приложения
+  cache:forget         Удалить элемент из кэша
+  cache:table          Создать миграцию для таблицы базы данных кеша
+
+ config
+  config:cache         Создайте файл кэша для более быстрой загрузки конфигурации
+  config:clear         Удалить файл кэша конфигурации
+
+ db
+  db:seed              Заполнить базу данных записями
+  db:wipe              Удалить все таблицы, представления и типы
+
+ debugbar
+  debugbar:clear       Очистить хранилище отладочной панели
+
+ event
+  event:cache          Обнаруживать и кэшировать события приложения и слушателей
+  event:clear          Очистить все кэшированные события и слушателей
+  event:generate       Генерация пропущенных событий и слушателей на основе регистрации
+  event:list           Список событий приложения и слушателей
+
+ key
+  key:generate         Установите ключ приложения
+
+ make
+  make:channel         		Создать новый класс канала
+  make:command         		Создать новую команду Artisan
+  make:controller      		Создать новый класс контроллера
+  make:event           		Создать новый класс событий
+  make:exception       		Создайте новый пользовательский класс исключений
+  make:factory         		Создать новую модель фабрики
+  make:job             		Создать новый класс работы
+  make:listener        		Создать новый класс слушателя событий
+  make:mail            		Создать новый класс электронной почты
+  make:middleware      		Создать новый класс middleware
+  make:migration       		Создать новый класс migration
+  make:model          		Создать новый класс модели Eloquent
+  make:model <NameClass> -m     Создать новый класс модели Eloquent c указанным названием класса и таблицей в БД
+  make:notification    		Создать новый класс уведомлений
+  make:observer        		Создать новый класс "наблюдатель"
+  make:policy          		Создать новый класс политики
+  make:provider        		Создать новый класс provider
+  make:request <NameClass>	Создать новый класс request
+  make:resource        		Создать новый класс resource
+  make:rule            		Создать новое правило проверки
+  make:seeder          		Создать новый класс seeder 
+  make:test            		Создать новый тестовый класс
+
+ migrate
+  migrate:fresh        Drop all tables and re-run all migrations
+  migrate:install      Create the migration repository
+  migrate:refresh      Reset and re-run all migrations
+  migrate:reset        Rollback all database migrations
+  migrate:rollback     Rollback the last database migration
+  migrate:status       Show the status of each migration
+
+ notifications
+  notifications:table  Create a migration for the notifications table
+
+ optimize
+  optimize:clear       Remove the cached bootstrap files
+
+ package
+  package:discover     Rebuild the cached package manifest
+
+ queue
+  queue:failed         List all of the failed queue jobs
+  queue:failed-table   Create a migration for the failed queue jobs database table
+  queue:flush          Flush all of the failed queue jobs
+  queue:forget         Delete a failed queue job
+  queue:listen         Listen to a given queue
+  queue:restart        Restart queue worker daemons after their current job
+  queue:retry          Retry a failed queue job
+  queue:table          Create a migration for the queue jobs database table
+  queue:work           Start processing jobs on the queue as a daemon
+
+ route
+  route:cache          Create a route cache file for faster route registration
+  route:clear          Remove the route cache file
+  route:list           List all registered routes
+
+ schedule
+  schedule:run         Run the scheduled commands
+
+ session
+  session:table        Create a migration for the session database table
+
+ storage
+  storage:link         Create a symbolic link from "public/storage" to "storage/app/public"
+
+ vendor
+  vendor:publish       Publish any publishable assets from vendor packages
+
+ view
+  view:cache           Compile all of the application's Blade templates
+  view:clear           Clear all compiled view files
