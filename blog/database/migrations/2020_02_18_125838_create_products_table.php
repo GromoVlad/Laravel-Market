@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->double('price')->default(0);
             $table->timestamps();
         });
+
+        (new ProductSeeder())->run();
     }
 
     /**

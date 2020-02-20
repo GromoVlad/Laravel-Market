@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Category;
+use App\Model\Product;
 
 class MainController extends Controller
 {
      public function index()
      {
-          return view('index');
+          $products = Product::get();
+          return view('index', compact('products'));
      }
 
      public function categories()
@@ -24,19 +26,10 @@ class MainController extends Controller
           return view('category', compact('category'));
      }
 
-     public function product($category, $product = null)
+     public function product($codeProduct)
      {
-          return view('product', compact('category', 'product'));
-     }
-
-     public function basket()
-     {
-          return view('basket');
-     }
-
-     public function order()
-     {
-          return view('order');
+          $product = Product::where('code', $codeProduct)->first();
+          return view('product', compact('product'));
      }
    
 }
