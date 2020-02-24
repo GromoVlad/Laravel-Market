@@ -6,7 +6,6 @@
     <title>@yield('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    {{-- <link rel="stylesheet" href="/blog/resources/css/@yield('style').css" > --}}
     <link rel="stylesheet" href="/blog/resources/css/bootstrap.css">
     <link rel="stylesheet" href="/blog/resources/css/@yield('style').css">
 </head>
@@ -25,14 +24,22 @@
                 <li><a href="/locale/en">en</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login">Войти</a></li>
+                @guest
+                    <li><a href="{{ route('login') }}">Панель администратора</a></li>
+                @endguest
+                @auth
+                        <li><a href="{{ route('order') }}">Профиль</a></li>
+                    <li><a href="{{ route('get-logout') }}">Выйти</a></li>
+                @endauth
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="container">
-    @yield('content')
+    <div class="starter-template">
+        @yield('content')
+    </div>
 </div>
 </body>
 </html>

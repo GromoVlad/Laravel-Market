@@ -8,10 +8,9 @@
             <p>
             <form action="{{ route('basket-add', $product->id) }}" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-default" role="button">В корзину</button>
+                <button type="submit" class="btn btn-info" role="button">В корзину</button>
             </form>
-            <a href="{{ route('product', [$product->category->code, $product->code]) }}" class="btn btn-default"
-               role="button">Подробнее</a>
+            <a href="{{ route('product', [$product->category->code, $product->code]) }}" class="btn btn-default" role="button">Подробнее</a>
             </p>
         </div>
     </div>
