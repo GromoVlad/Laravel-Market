@@ -45,3 +45,15 @@ span.badge.badge-danger {
 div.filters {
     padding-bottom: 5px;
 }
+
+div.two_buttons{
+    display: flex;
+    justify-content: center;
+}
+div.two_buttons form{
+    margin: 0 0.75rem;
+}
+
+div.two_buttons a{
+    margin: 0 0.75rem;
+}

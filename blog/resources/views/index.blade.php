@@ -6,8 +6,8 @@
     @if(session()->has('successOrder'))
         <p class="alert alert-success">{{ session()->get('successOrder') }}</p>
     @endif
-    @if(session()->has('isAdmin'))
-        <p class="alert alert-warning">{{ session()->get('isAdmin') }}</p>
+    @if(session()->has('warning'))
+        <p class="alert alert-warning">{{ session()->get('warning') }}</p>
     @endif
 
     <h1>Все товары</h1>

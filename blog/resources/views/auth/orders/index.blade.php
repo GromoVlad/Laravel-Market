@@ -8,24 +8,12 @@
         <table class="table">
             <tbody>
             <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    Имя
-                </th>
-                <th>
-                    Телефон
-                </th>
-                <th>
-                    Когда отправлен
-                </th>
-                <th>
-                    Сумма
-                </th>
-                <th>
-                    Действия
-                </th>
+                <th>#</th>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Когда отправлен</th>
+                <th>Сумма</th>
+                <th>Действия</th>
             </tr>
             @foreach($orders as $order)
                 <tr>
