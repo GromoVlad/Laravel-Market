@@ -28,9 +28,11 @@
 
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route('categories.index') }}">Категории</a></li>
-                    <li><a href="{{ route('products.index') }}">Товары</a></li>
-                    <li><a href="http://laravel-diplom-1.rdavydov.ru/admin/orders">Заказы</a></li>
+                    @isAdmin
+                        <li><a href="{{ route('categories.index') }}">Категории</a></li>
+                        <li><a href="{{ route('products.index') }}">Товары</a></li>
+                        <li><a href="{{ route('admin-order') }}">Заказы</a></li>
+                    @endisAdmin
                 </ul>
 
                 @guest
@@ -50,14 +52,16 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false" v-pre>
-                                Администратор
+                                Пользователь: {{ucfirst(Auth::user()->name)}}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a class="dropdown-item" href="{{ route('logout')}}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Выйти
                                 </a>
-                                <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display:none;">
+                                <form id="logout-form" action="{{ route('logout')}}" method="POST"
+                                      style="display:none;">
                                     @csrf
                                 </form>
                             </div>

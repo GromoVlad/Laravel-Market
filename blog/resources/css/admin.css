@@ -10,3 +10,8 @@ ul.navbar-nav{
 ul.navbar-nav li{
    margin: 0 2rem;
 }
+
+.margin-top{
+    margin-top: 1.5rem;
+    width: 64%;
+}

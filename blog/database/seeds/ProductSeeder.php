@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
             'name'    => 'iPhone X 64GB',
             'code' => 'iphone_x_64',
             'category_id' => 1,
-            'image' => NULL,
+            'image' => 'products/6psVvU6jBgocGR9XMM33UWDodJ6VJfIE2St2bkua.jpeg',
             'description' => 'Отличный продвинутый телефон с памятью на 64 gb',
             'price' => 71990,
         ]);
@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
             'name'    => 'iPhone X 256GB',
             'code' => 'iphone_x_256',
             'category_id' => 1,
-            'image' => NULL,
+            'image' => 'products/oSBr2K2PFKUyq6f6AMTIpgPWsIe0QpIZBab2RKHt.jpeg',
             'description' => 'Отличный продвинутый телефон с памятью на 256 gb',
             'price' => 89990,
         ]); 
@@ -34,7 +34,7 @@ class ProductSeeder extends Seeder
             'name'    => 'HTC One S',
             'code' => 'htc_one_s',
             'category_id' => 1,
-            'image' => NULL,
+            'image' => 'products/jFDiHLEhvJ56qW9b63pytyLk6EDqHQyIdw4uccyZ.png',
             'description' => 'Зачем платить за лишнее? Легендарный HTC One S',
             'price' => 12490,
         ]); 
@@ -43,25 +43,25 @@ class ProductSeeder extends Seeder
             'name'    => 'iPhone 5SE',
             'code' => 'iphone_5se',
             'category_id' => 1,
-            'image' => NULL,
+            'image' => 'products/Npxv3MeMjuLMSnI0I3hA68wdapEZQyWMutCJ6gCu.jpeg',
             'description' => 'Отличный классический iPhone',
-            'price' => 17221,
+            'price' => 17300,
         ]);
 
         Product::insert([
             'name'    => 'Наушники Beats Audio',
             'code' => 'beats_audio',
             'category_id' => 2,
-            'image' => NULL,
+            'image' => 'products/pr27sLUHNHm13V86MefeSW7swnSW6vhK2xOD40LA.jpeg',
             'description' => 'Отличный звук от Dr. Dre',
-            'price' => 17221,
+            'price' => 8470,
         ]);
 
         Product::insert([
             'name'    => 'Камера GoPro',
             'code' => 'gopro',
             'category_id' => 2,
-            'image' => NULL,
+            'image' => 'products/1MFGQQ8n6aSO1q9bOrp5IokgZe1Gq0hpBGjrjx5i.jpeg',
             'description' => 'Снимай самые яркие моменты с помощью этой камеры',
             'price' => 12000,
         ]);
@@ -70,7 +70,7 @@ class ProductSeeder extends Seeder
             'name'    => 'Камера Panasonic HC-V770',
             'code' => 'panasonic_hc',
             'category_id' => 2,
-            'image' => NULL,
+            'image' => 'products/o5XrQTD05qLzYRsUX9dQtV9AAUg93jvWpql0DuFO.jpeg',
             'description' => 'Для серьёзной видео съемки нужна серьёзная камера. Panasonic HC-V770 для этих целей лучший выбор!',
             'price' => 27900,
         ]);
@@ -79,7 +79,7 @@ class ProductSeeder extends Seeder
             'name'    => 'Кофемашина DeLongi',
             'code' => 'delongi',
             'category_id' => 3,
-            'image' => NULL,
+            'image' => 'products/JdtQpkGPULkfulCpsC8f6BzJVwYB7lmTckFrbHEx.jpeg',
             'description' => 'Хорошее утро начинается с хорошего кофе!',
             'price' => 25200,
         ]);
@@ -88,7 +88,7 @@ class ProductSeeder extends Seeder
             'name'    => 'Холодильник Haier',
             'code' => 'haier',
             'category_id' => 3,
-            'image' => NULL,
+            'image' => 'products/ge2bgr3IZQ2b7JA3dCRCoiHYQJcDdjBxAXSnRQVH.jpeg',
             'description' => 'Для большой семьи - большой холодильник!',
             'price' => 40200,
         ]);
@@ -97,7 +97,7 @@ class ProductSeeder extends Seeder
             'name'    => 'Блендер Moulinex',
             'code' => 'moulinex',
             'category_id' => 3,
-            'image' => NULL,
+            'image' => 'products/fpLwPlTs9gvFdqBld5dLQqRsREU75RX4rj6hkg7g.jpeg',
             'description' => 'Для самых смелых идей!',
             'price' => 4200,
         ]);
@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
             'name'    => 'Мясорубка Bosch',
             'code' => 'bosch',
             'category_id' => 3,
-            'image' => NULL,
+            'image' => 'products/GToCs1xPvwu6XwsTIaFTZqHQ6V8hLoKDmOR7zsUo.jpeg',
             'description' => 'Любите домашние котлеты? Вам определенно стоит посмотреть на эту мясорубку!',
             'price' => 9200,
         ]);

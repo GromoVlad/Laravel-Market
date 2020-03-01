@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::directive('routeactive', function ($route) {
+            return "<?php echo Route::CurrentRouteNamed($route) ? 'class=\"active\"' : '' ?>";
+        });
+
+        Blade::if('isAdmin', function () {
+            return Auth::check() && Auth::user()->isAdmin();
+        });
     }
 }

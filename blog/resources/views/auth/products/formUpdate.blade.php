@@ -15,6 +15,9 @@
                         <input type="text" class="form-control" name="code" id="code" value="{{ $product->code }}">
                     </div>
                 </div>
+                @error('code')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название: </label>
@@ -22,15 +25,17 @@
                         <input type="text" class="form-control" name="name" id="name" value="{{ $product->name }}">
                     </div>
                 </div>
+                @error('name')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
-
                 <div class="input-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">Категория: </label>
                     <div class="col-sm-6">
                         <select name="category_id" id="category_id" class="form-control">
                             @foreach($categories as $category)
-
-                                <option @if($category->id === $product->category_id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
+                                <option @if($category->id === $product->category_id) selected
+                                        @endif value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -43,6 +48,9 @@
                                   rows="7">{{ $product->description }}</textarea>
                     </div>
                 </div>
+                @error('description')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
@@ -59,6 +67,9 @@
                         <input type="text" class="form-control" name="price" id="price" value="{{ $product->price }}">
                     </div>
                 </div>
+                @error('price')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <button class="btn btn-success">Сохранить</button>
             </div>
         </form>

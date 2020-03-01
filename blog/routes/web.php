@@ -31,12 +31,18 @@ Route::group(['middleware' => ['basketIsNotEmpty']], function () {
 });
 
 Route::group(['middleware' => ['auth', 'isAdmin']], function () {
-    Route::get('/orders', 'Admin\OrderController@index')->name('order');
+    Route::get('admin/orders', 'Admin\OrderController@index')->name('admin-order');
+    Route::get('admin/orders/{order}', 'Admin\OrderController@show')->name('admin-order-show');
     Route::resource('admin/categories', 'Admin\CategoryController');
     Route::resource('admin/products', 'Admin\ProductController');
+});
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('person/orders', 'Person\OrderController@index')->name('person-order');
+    Route::get('person/orders/{order}', 'Person\OrderController@show')->name('person-order-show');
 });
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
+
 Route::get('/{category}', 'MainController@category')->name('category');
 Route::get('/{category}/{product}', 'MainController@product')->name('product');

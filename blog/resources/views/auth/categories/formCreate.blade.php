@@ -4,16 +4,19 @@
 
 @section('content')
     <div class="col-md-12">
-            <h2>Добавить категорию</h2>
+        <h2>Добавить категорию</h2>
         <form method="POST" enctype="multipart/form-data" action="{{ route('categories.store') }}">
             <div>
                 @csrf
                 <div class="input-group row">
                     <label for="code" class="col-sm-2 col-form-label">Код: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="code" id="code" >
+                        <input type="text" class="form-control" name="code" id="code">
                     </div>
                 </div>
+                @error('code')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название: </label>
@@ -21,6 +24,9 @@
                         <input type="text" class="form-control" name="name" id="name">
                     </div>
                 </div>
+                @error('name')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="description" class="col-sm-2 col-form-label">Описание: </label>
@@ -28,6 +34,9 @@
                         <textarea name="description" id="description" cols="72" rows="7"></textarea>
                     </div>
                 </div>
+                @error('description')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>

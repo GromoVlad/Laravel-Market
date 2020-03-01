@@ -24,8 +24,13 @@
                     <td>{{$order->getFullPrice()}} руб.</td>
                     <td>
                         <div class="btn-group" role="group">
-                            <a class="btn btn-success" type="button"
-                               href="http://laravel-diplom-1.rdavydov.ru/admin/orders/1">Открыть</a>
+                            @isAdmin
+                                <a class="btn btn-success" type="button"
+                                   href="{{ route('admin-order-show', $order) }}">Открыть</a>
+                            @else
+                                <a class="btn btn-success" type="button"
+                                   href="{{ route('person-order-show', $order) }}">Открыть</a>
+                            @endisAdmin
                         </div>
                     </td>
                 </tr>

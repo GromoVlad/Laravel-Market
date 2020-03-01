@@ -15,6 +15,9 @@
                         <input type="text" class="form-control" name="code" id="code" value="{{ $category->code }}">
                     </div>
                 </div>
+                @error('code')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название: </label>
@@ -22,6 +25,9 @@
                         <input type="text" class="form-control" name="name" id="name" value="{{ $category->name }}">
                     </div>
                 </div>
+                @error('name')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="description" class="col-sm-2 col-form-label">Описание: </label>
@@ -30,6 +36,9 @@
                                   rows="7">{{ $category->description }}</textarea>
                     </div>
                 </div>
+                @error('description')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
                 <br>
                 <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
