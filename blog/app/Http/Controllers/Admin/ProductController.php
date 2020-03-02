@@ -47,6 +47,13 @@ class ProductController extends Controller
             $path = $request->file('image')->store('products');
             $params['image'] = $path;
         }
+
+        foreach(['new', 'hit', 'recommend'] as $fieldName){
+            if(isset($params[$fieldName])){
+                $params[$fieldName] = 1;
+            }
+        }
+
         Product::create($params);
         return redirect()->route('products.index');
     }
@@ -90,6 +97,15 @@ class ProductController extends Controller
             $path = $request->file('image')->store('products');
             $params['image'] = $path;
         }
+
+        foreach(['new', 'hit', 'recommend'] as $fieldName){
+            if(isset($params[$fieldName])){
+                $params[$fieldName] = 1;
+            } else {
+                $params[$fieldName] = 0;
+            }
+        }
+
         $product->update($params);
         return redirect()->route('products.index');
     }

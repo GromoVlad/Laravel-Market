@@ -18,12 +18,12 @@ Auth::routes([
 ]);
 
 Route::get('/', 'MainController@index')->name('index');
-
+Route::get('/reset', 'ResetController@reset')->name('reset');
 Route::get('/categories', 'MainController@categories')->name('categories');
-
 Route::post('/basket/add/{id}', 'BasketController@basketAdd')->name('basket-add');
+Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
-Route::group(['middleware' => ['basketIsNotEmpty']], function () {
+Route::group(['middleware' => 'basketIsNotEmpty'], function () {
     Route::get('/basket', 'BasketController@basket')->name('basket');
     Route::get('/basket/place', 'BasketController@basketPlace')->name('basket-place');
     Route::post('/basket/remove/{id}', 'BasketController@basketRemove')->name('basket-remove');
@@ -41,8 +41,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('person/orders', 'Person\OrderController@index')->name('person-order');
     Route::get('person/orders/{order}', 'Person\OrderController@show')->name('person-order-show');
 });
-
-Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
 Route::get('/{category}', 'MainController@category')->name('category');
 Route::get('/{category}/{product}', 'MainController@product')->name('product');

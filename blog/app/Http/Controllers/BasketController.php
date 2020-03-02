@@ -15,7 +15,6 @@ class BasketController extends Controller
         if (!is_null($orderId)) {
             $order = Order::findOrFail($orderId);
         }
-
         return view('basket', compact('order'));
     }
 
@@ -26,7 +25,6 @@ class BasketController extends Controller
             return redirect()->route('index');
         }
         $order = Order::find($orderId);
-
         return view('order', compact('order'));
     }
 

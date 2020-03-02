@@ -15,9 +15,7 @@
                         <input type="text" class="form-control" name="code" id="code" value="{{ $product->code }}">
                     </div>
                 </div>
-                @error('code')
-                <div class="alert alert-danger margin-top">{{$message}}</div>
-                @enderror
+                @include('auth.layout.error', ['fieldName' => 'code'])
                 <br>
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название: </label>
@@ -25,9 +23,7 @@
                         <input type="text" class="form-control" name="name" id="name" value="{{ $product->name }}">
                     </div>
                 </div>
-                @error('name')
-                <div class="alert alert-danger margin-top">{{$message}}</div>
-                @enderror
+                @include('auth.layout.error', ['fieldName' => 'name'])
                 <br>
                 <div class="input-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">Категория: </label>
@@ -48,9 +44,7 @@
                                   rows="7">{{ $product->description }}</textarea>
                     </div>
                 </div>
-                @error('description')
-                <div class="alert alert-danger margin-top">{{$message}}</div>
-                @enderror
+                @include('auth.layout.error', ['fieldName' => 'description'])
                 <br>
                 <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
@@ -67,9 +61,22 @@
                         <input type="text" class="form-control" name="price" id="price" value="{{ $product->price }}">
                     </div>
                 </div>
-                @error('price')
-                <div class="alert alert-danger margin-top">{{$message}}</div>
-                @enderror
+                @include('auth.layout.error', ['fieldName' => 'price'])
+                <br>
+                @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
+                    <div class="input-group row">
+                        <label for="name" class="col-sm-2 col-form-label">{{$title}}</label>
+                        <div class="col-sm-1">
+                            <input type="checkbox" class="form-control" name="{{$field}}" id="{{$field}}"
+                                @if(isset($product) && $product->$field === 1)
+                                   checked
+                                @endif
+                            >
+                        </div>
+                    </div>
+                    <br>
+                    @include('auth.layout.error', ['fieldName' => $field])
+                @endforeach
                 <button class="btn btn-success">Сохранить</button>
             </div>
         </form>
