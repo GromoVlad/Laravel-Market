@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::get();
+        $products = Product::paginate(10);
         return view('auth.products.index', compact('products'));
     }
 
@@ -46,12 +46,6 @@ class ProductController extends Controller
         if ($request->has('image')) {
             $path = $request->file('image')->store('products');
             $params['image'] = $path;
-        }
-
-        foreach(['new', 'hit', 'recommend'] as $fieldName){
-            if(isset($params[$fieldName])){
-                $params[$fieldName] = 1;
-            }
         }
 
         Product::create($params);
@@ -98,10 +92,8 @@ class ProductController extends Controller
             $params['image'] = $path;
         }
 
-        foreach(['new', 'hit', 'recommend'] as $fieldName){
-            if(isset($params[$fieldName])){
-                $params[$fieldName] = 1;
-            } else {
+        foreach (['new', 'hit', 'recommend'] as $fieldName) {
+            if (!isset($params[$fieldName])) {
                 $params[$fieldName] = 0;
             }
         }

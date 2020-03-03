@@ -36,4 +36,19 @@ class Product extends Model
     {
         return $this->recommend === 1;
     }
+
+    public function setNewAttribute($value)
+    {
+        return $this->attributes['new'] = $value === 'on' ? 1 : 0;
+    }
+
+    public function setHitAttribute($value)
+    {
+        return $this->attributes['hit'] = $value === 'on' ? 1 : 0;
+    }
+
+    public function setRecommendAttribute($value)
+    {
+        return $this->attributes['recommend'] = $value === 'on' ? 1 : 0;
+    }
 }

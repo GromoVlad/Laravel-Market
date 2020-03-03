@@ -35,6 +35,16 @@
                 <td>Категория</td>
                 <td>{{ $product->category->name }}</td>
             </tr>
+            <tr>
+                <td>Относится к подкатегориям</td>
+                <td>
+                    @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
+                        @if($product->$field === 1)
+                            <span class="badge badge-success"> {{$title}}</span>
+                        @endif
+                    @endforeach
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>
