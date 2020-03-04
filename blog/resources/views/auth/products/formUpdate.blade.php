@@ -63,6 +63,14 @@
                 </div>
                 @include('auth.layout.error', ['fieldName' => 'price'])
                 <br>
+                <div class="input-group row">
+                    <label for="count" class="col-sm-2 col-form-label">Количество: </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="count" id="count" value="{{ $product->count }}">
+                    </div>
+                </div>
+                @include('auth.layout.error', ['fieldName' => 'count'])
+                <br>
                 @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
                     <div class="input-group row">
                         <label for="name" class="col-sm-2 col-form-label">{{$title}}</label>

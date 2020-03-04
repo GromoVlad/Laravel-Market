@@ -3,6 +3,8 @@
 @section('title', 'Товары')
 
 @section('content')
+
+
     <div class="col-md-12">
         <h1>Товары</h1>
         <table class="table">
@@ -13,6 +15,7 @@
                 <th>Название</th>
                 <th>Категория</th>
                 <th>Цена</th>
+                <th>Количество</th>
                 <th>Действия</th>
             </tr>
             @foreach($products as $product)
@@ -22,6 +25,7 @@
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->category->name }}</td>
                     <td>{{ $product->price }}</td>
+                    <td>{{ $product->count }}</td>
                     <td>
                         <div class="btn-group" role="group">
                                 <a class="btn btn-success" type="button"

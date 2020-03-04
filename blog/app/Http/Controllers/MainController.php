@@ -11,6 +11,7 @@ class MainController extends Controller
 {
     public function index(ProductsFilterRequest $request)
     {
+
         $productsQuery = Product::with('category');
 
         if ($request->filled('price_from')) {
@@ -23,7 +24,7 @@ class MainController extends Controller
 
         foreach (['new', 'hit', 'recommend'] as $field) {
             if ($request->has($field)) {
-                $productsQuery->where($field, 1);
+                $productsQuery->$field();
             }
         }
         $products = $productsQuery->paginate(6)->withPath("?" . $request->getQueryString());

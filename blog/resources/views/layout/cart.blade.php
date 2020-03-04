@@ -16,11 +16,16 @@
             <h3>{{ $product->name }}</h3>
             <p>{{ $product->price }} руб.</p>
             <div class="two_buttons">
-            <form action="{{ route('basket-add', $product->id) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-info" role="button">В корзину</button>
-            </form>
-            <a href="{{ route('product', [isset($category) ? $category->code : $product->category->code, $product->code]) }}" class="btn btn-default" role="button">Подробнее</a>
+                <form action="{{ route('basket-add', $product->id) }}" method="POST">
+                    @csrf
+                    @if($product->isAvailable())
+                        <button type="submit" class="btn btn-info" role="button">В корзину</button>
+                    @else
+                        <button disabled class="btn btn-secondary" role="button">Нет в наличии</button>
+                    @endif
+                </form>
+                <a href="{{ route('product', [isset($category) ? $category->code : $product->category->code, $product->code]) }}"
+                   class="btn btn-default" role="button">Подробнее</a>
             </div>
         </div>
     </div>

@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-
-    protected $fillable = ['category_id', 'name', 'code', 'description', 'image', 'price', 'new', 'hit', 'recommend'];
+    protected $fillable = ['category_id', 'name', 'code', 'description', 'image', 'price', 'new', 'hit', 'recommend', 'count'];
 
     public function category()
     {
@@ -20,6 +19,26 @@ class Product extends Model
             return $this->pivot->count * $this->price;
         }
         return $this->price;
+    }
+
+    public function scopeNew($query)
+    {
+        return $query->where('new', 1);
+    }
+
+    public function scopeHit($query)
+    {
+        return $query->where('hit', 1);
+    }
+
+    public function scopeRecommend($query)
+    {
+        return $query->where('recommend', 1);
+    }
+
+    public function isAvailable()
+    {
+        return $this->count > 0;
     }
 
     public function isNew()

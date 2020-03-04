@@ -45,7 +45,7 @@ class BasketController extends Controller
             $order->products()->attach($productId);
         }
 
-        if(Auth::check()){
+        if (Auth::check()) {
             $order->user_id = Auth::id();
             $order->save();
         }
@@ -79,6 +79,7 @@ class BasketController extends Controller
 
         return redirect()->route('basket');
     }
+
     public function basketConfirm(Request $request)
     {
         $orderId = session('orderId');
@@ -87,13 +88,13 @@ class BasketController extends Controller
         }
         $order = Order::find($orderId);
         $success = $order->saveOrder($request->name, $request->phone);
-        
+
         if ($success) {
             session()->flash('successOrder', 'Ваш заказ принят в обработку!');
         } else {
             session()->flash('warning', 'Случилась ошибка');
         }
-        
+
         return redirect()->route('index');
     }
 }

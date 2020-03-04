@@ -3,12 +3,23 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Order extends Model
 {
     public function products()
     {
         return $this->belongsToMany(Product::class)->withPivot('count')->withTimestamps();
+    }
+
+    public function scopeActiveOrders($query)
+    {
+        return $query->where('user_id', Auth::user()->id)->where('status', 1);
+    }
+
+    public function scopeActiveOrdersAllUsers($query)
+    {
+        return $query->where('status', 1);
     }
 
     public function getFullPrice()

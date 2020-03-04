@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use App\Model\Order;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
