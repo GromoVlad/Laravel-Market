@@ -3,9 +3,12 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = ['category_id', 'name', 'code', 'description', 'image', 'price', 'new', 'hit', 'recommend', 'count'];
 
     public function category()
@@ -38,7 +41,7 @@ class Product extends Model
 
     public function isAvailable()
     {
-        return $this->count > 0;
+        return !$this->trashed() && $this->count > 0;
     }
 
     public function isNew()

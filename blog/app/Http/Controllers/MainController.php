@@ -11,7 +11,6 @@ class MainController extends Controller
 {
     public function index(ProductsFilterRequest $request)
     {
-
         $productsQuery = Product::with('category');
 
         if ($request->filled('price_from')) {
@@ -45,7 +44,7 @@ class MainController extends Controller
 
     public function product($category, $codeProduct)
     {
-        $product = Product::where('code', $codeProduct)->first();
+        $product = Product::withTrashed()->where('code', $codeProduct)->first();
         return view('product', compact('product'));
     }
 
