@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad163bb0-2d17-44c2-ad16-24962c7de76c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/app/Classes/Basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="ad163bb0-2d17-44c2-ad16-24962c7de76c" name="Default" comment="commit 9 (25 full)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/.env" beforeDir="false" afterPath="$PROJECT_DIR$/blog/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/Person/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/Person/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/auth/orders/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/auth/orders/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/basket.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/basket.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +131,15 @@
       <path value="$PROJECT_DIR$/blog/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/blog/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/blog/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/blog/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-ide-helper" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aiUNuEjKzc7RL8OBHrf9tcszjP" />
@@ -155,6 +151,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -164,21 +161,21 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\OSPanel\domains\laravel\blog\app\Model" />
+      <recent name="C:\Server\data\htdocs\blog\resources\views\auth" />
+      <recent name="C:\Server\data\htdocs\blog\app" />
+      <recent name="C:\Server\data\htdocs\blog\app\Model" />
+      <recent name="C:\Server\data\htdocs\blog\app\Http" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Server\data\htdocs\blog\resources\views\auth\products" />
       <recent name="C:\Server\data\htdocs\blog\resources\views\auth\categories" />
       <recent name="C:\Server\data\htdocs\blog\resources\views\categories" />
       <recent name="C:\Server\data\htdocs\blog\resources\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Server\data\htdocs\blog\resources\views\auth" />
-      <recent name="C:\Server\data\htdocs\blog\app" />
-      <recent name="C:\Server\data\htdocs\blog\app\Model" />
-      <recent name="C:\Server\data\htdocs\blog\app\Http" />
-      <recent name="C:\Server\data\htdocs\blog\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -218,8 +215,28 @@
       <workItem from="1583342602205" duration="6322000" />
       <workItem from="1587217871802" duration="2711000" />
       <workItem from="1587225446641" duration="2179000" />
-      <workItem from="1587233561585" duration="12529000" />
+      <workItem from="1587233561585" duration="12692000" />
+      <workItem from="1587272683877" duration="15135000" />
+      <workItem from="1587382502689" duration="3461000" />
+      <workItem from="1587464601416" duration="8287000" />
+      <workItem from="1587497792062" duration="628000" />
+      <workItem from="1587587389071" duration="1806000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 8 (23 full)">
+      <created>1587251586905</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587251586905</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit 9 (25 full)">
+      <created>1587588977560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587588977560</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -234,27 +251,56 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit 8 (23 full)" />
+    <MESSAGE value="commit 9 (25 full)" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 9 (25 full)" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1587242048710">
+    <state x="718" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587283038746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587242048710" />
+    <state x="718" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587283038746" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1587292115523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587292115523" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587246015275">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587246015275" />
+    <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2" timestamp="1587588975624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587588975624" />
     <state x="709" y="243" key="NewPhpClassDialog" timestamp="1587241851871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="243" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587241851871" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1587225436092">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1587469858434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587225436092" />
-    <state x="667" y="255" width="990" height="677" key="find.popup" timestamp="1587242927564">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587469858434" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1587588591365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="255" width="990" height="677" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587242927564" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587588591365" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587589025260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587589025260" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587589009177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587589009177" />
+    <state x="667" y="255" width="990" height="677" key="find.popup" timestamp="1587473591863">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="255" width="990" height="677" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587473591863" />
+    <state x="744" y="421" width="639" height="197" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1587272869244">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="744" y="421" width="639" height="197" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587272869244" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587235188118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

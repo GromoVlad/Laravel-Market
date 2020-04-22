@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Classes\Basket;
 use Illuminate\Http\Request;
-use App\Model\Order;
 use App\Model\Product;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +17,8 @@ class BasketController extends Controller
 
     public function basketConfirm(Request $request)
     {
-        if ((new Basket())->saveOrder($request->name, $request->phone)) {
+        $email = Auth::check() ? Auth::user()->email : $request->email;
+        if ((new Basket())->saveOrder($request->name, $request->phone, $email)) {
             session()->flash('success', 'Ваш заказ принят в обработку!');
         } else {
             session()->flash('warning', 'Товар не доступен для заказа в полном объеме');
