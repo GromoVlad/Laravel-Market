@@ -97,6 +97,15 @@
       <path value="$PROJECT_DIR$/blog/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/blog/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/blog/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/blog/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-ide-helper" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

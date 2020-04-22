@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\SubscriptionRequest;
+use App\Model\Subscription;
 use App\Model\Category;
 use App\Model\Product;
 use App\Http\Requests\ProductsFilterRequest;
@@ -44,8 +45,18 @@ class MainController extends Controller
 
     public function product($category, $codeProduct)
     {
-        $product = Product::withTrashed()->where('code', $codeProduct)->first();
+        $product = Product::withTrashed()->where('code', $codeProduct)->firstOrFail();
         return view('product', compact('product'));
+    }
+
+    public function subscribe(SubscriptionRequest $request, Product $product)
+    {
+        Subscription::create([
+            'email' => $request->email,
+            'product_id' => $product->id,
+        ]);
+
+        return redirect()->back()->with('success', 'Спасибо, мы сообщим Вам о поступлении товара');
     }
 
 }

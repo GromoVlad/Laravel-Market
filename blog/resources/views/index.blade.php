@@ -3,8 +3,8 @@
 @section('title', 'Главная страница')
 
 @section('content')
-    @if(session()->has('successOrder'))
-        <p class="alert alert-success">{{ session()->get('successOrder') }}</p>
+    @if(session()->has('success'))
+        <p class="alert alert-success">{{ session()->get('success') }}</p>
     @endif
     @if(session()->has('warning'))
         <p class="alert alert-warning">{{ session()->get('warning') }}</p>
@@ -23,13 +23,13 @@
             </div>
             <div class="col-sm-2 col-md-2">
                 <label for="hit">
-                    <input type="checkbox" name="hit" id="hit" @if(request()->has('hit')) checked @endif > 
+                    <input type="checkbox" name="hit" id="hit" @if(request()->has('hit')) checked @endif >
                     Хит
                 </label>
             </div>
             <div class="col-sm-2 col-md-2">
                 <label for="new">
-                    <input type="checkbox" name="new" id="new" @if(request()->has('new')) checked @endif > 
+                    <input type="checkbox" name="new" id="new" @if(request()->has('new')) checked @endif >
                     Новинка
                 </label>
             </div>

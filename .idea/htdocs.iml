@@ -7,7 +7,16 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/barryvdh/laravel-debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/barryvdh/laravel-ide-helper" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/barryvdh/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/symfony/filesystem" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

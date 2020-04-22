@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Model\Product;
+use App\Observers\ProductObserver;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Auth;
@@ -32,5 +34,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::if('isAdmin', function () {
             return Auth::check() && Auth::user()->isAdmin();
         });
+
+        Product::observe(ProductObserver::class);
     }
 }

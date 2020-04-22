@@ -9,6 +9,7 @@ Auth::routes([
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/reset', 'ResetController@reset')->name('reset');
 Route::get('/categories', 'MainController@categories')->name('categories');
+Route::post('/subscription/{product}', 'MainController@subscribe')->name('subscription');
 Route::post('/basket/add/{product}', 'BasketController@basketAdd')->name('basket-add');
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
