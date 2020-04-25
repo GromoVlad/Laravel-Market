@@ -7,16 +7,16 @@
         <div class="container">
             <div class="justify-content-center">
                 <div class="panel">
-                    <h1>Заказ №{{ $order->id }}</h1>
-                    <p>Заказчик: <b>{{ucfirst($order->name) }}</b></p>
-                    <p>Номер телефона: <b>{{ $order->phomne }}</b></p>
+                    <h1>@lang('order.order') №{{ $order->id }}</h1>
+                    <p>@lang('order.customer'): <b>{{ucfirst($order->name) }}</b></p>
+                    <p>@lang('order.phone'): <b>{{ $order->phone }}</b></p>
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Название</th>
-                            <th>Кол-во</th>
-                            <th>Цена</th>
-                            <th>Стоимость</th>
+                            <th>@lang('order.title')</th>
+                            <th>@lang('order.amount')</th>
+                            <th>@lang('order.price')</th>
+                            <th>@lang('order.cost')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -25,17 +25,17 @@
                                 <td>
                                     <a href="{{ route('product', [$product->category->code, $product->code] ) }}">
                                         <img height="56px" src="{{ Storage::url($product->image) }}">
-                                        {{ $product->name }}
+                                        {{ $product->__('name') }}
                                     </a>
                                 </td>
                                 <td>{{ $product->pivot->count }}</td>
                                 <td>{{ $product->price }} руб.</td>
-                                <td>{{ $product->getPriceForCount()}} руб.</td>
+                                <td>{{ $product->getPriceForCount()}} ₽</td>
                             </tr>
                         @endforeach
                         <tr>
-                            <td colspan="3">Общая стоимость:</td>
-                            <td>{{ $order->getFullPrice() }} руб.</td>
+                            <td colspan="3"><h3>@lang('order.total_cost'):</h3></td>
+                            <td><h5>{{ $order->getFullPrice() }} ₽</h5></td>
                         </tr>
                         </tbody>
                     </table>

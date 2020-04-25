@@ -11,6 +11,7 @@
                 <th>#</th>
                 <th>Код</th>
                 <th>Название</th>
+                <th>Название_Eng</th>
                 <th>Действия</th>
             </tr>
             @foreach($categories as $category)
@@ -18,6 +19,7 @@
                     <td>{{ $category->id }}</td>
                     <td>{{ $category->code }}</td>
                     <td>{{ $category->name }}</td>
+                    <td>{{ $category->name_en }}</td>
                     <td>
                         <div class="btn-group" role="group">
                             <a class="btn btn-success" type="button" href="{{ route('categories.show', $category) }}">Открыть</a>

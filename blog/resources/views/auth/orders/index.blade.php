@@ -4,16 +4,16 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1>Заказы</h1>
+        <h1>@lang('order.orders')</h1>
         <table class="table">
             <tbody>
             <tr>
                 <th>#</th>
-                <th>Имя</th>
-                <th>Телефон</th>
-                <th>Когда отправлен</th>
-                <th>Сумма</th>
-                <th>Действия</th>
+                <th>@lang('order.name')</th>
+                <th>@lang('order.phone')</th>
+                <th>@lang('order.when_sent')</th>
+                <th>@lang('order.sum')</th>
+                <th>@lang('order.actions')</th>
             </tr>
             @foreach($orders as $order)
                 <tr>
@@ -21,15 +21,15 @@
                     <td>{{$order->name}}</td>
                     <td>{{$order->phone}}</td>
                     <td>{{$order->created_at->format('d/m/Y в H:i:s')}}</td>
-                    <td>{{$order->getFullPrice()}} руб.</td>
+                    <td>{{$order->getFullPrice()}} ₽</td>
                     <td>
                         <div class="btn-group" role="group">
                             @isAdmin
                                 <a class="btn btn-success" type="button"
-                                   href="{{ route('admin-order-show', $order) }}">Открыть</a>
+                                   href="{{ route('admin-order-show', $order) }}">@lang('order.open')</a>
                             @else
                                 <a class="btn btn-success" type="button"
-                                   href="{{ route('person-order-show', $order) }}">Открыть</a>
+                                   href="{{ route('person-order-show', $order) }}">@lang('order.open')</a>
                             @endisAdmin
                         </div>
                     </td>

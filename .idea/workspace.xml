@@ -2,8 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad163bb0-2d17-44c2-ad16-24962c7de76c" name="Default" comment="commit 9 (25 full)">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/blog/resources/views/mail/order_created.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/resources/views/mail/subscription.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/.env" beforeDir="false" afterPath="$PROJECT_DIR$/blog/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Classes/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Classes/Basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Model/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/blog/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2020_02_20_100539_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2020_02_20_100539_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/vendor/composer/installed.json" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +247,11 @@
       <workItem from="1587382502689" duration="3461000" />
       <workItem from="1587464601416" duration="8287000" />
       <workItem from="1587497792062" duration="628000" />
+<<<<<<< HEAD
       <workItem from="1587587389071" duration="1806000" />
+=======
+      <workItem from="1587587389071" duration="1560000" />
+>>>>>>> origin/master
     </task>
     <task id="LOCAL-00001" summary="commit 8 (23 full)">
       <created>1587251586905</created>
@@ -228,6 +259,7 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1587251586905</updated>
+<<<<<<< HEAD
     </task>
     <task id="LOCAL-00002" summary="commit 9 (25 full)">
       <created>1587588977560</created>
@@ -237,6 +269,10 @@
       <updated>1587588977560</updated>
     </task>
     <option name="localTasksCounter" value="3" />
+=======
+    </task>
+    <option name="localTasksCounter" value="2" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="TodoView">
@@ -269,10 +305,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587246015275" />
+<<<<<<< HEAD
     <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2" timestamp="1587588975624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587588975624" />
+=======
+    <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2" timestamp="1587588691013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="456" y="115" width="1069" height="868" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587588691013" />
+>>>>>>> origin/master
     <state x="709" y="243" key="NewPhpClassDialog" timestamp="1587241851871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,6 +328,7 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587588591365" />
+<<<<<<< HEAD
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587589025260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -293,6 +337,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587589009177" />
+=======
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587273013029">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587273013029" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587272713336">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587272713336" />
+>>>>>>> origin/master
     <state x="667" y="255" width="990" height="677" key="find.popup" timestamp="1587473591863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -24,12 +24,14 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'code'        => 'required|min:1|max:10|unique:categories,code',
-            'name'        => 'required|min:4|max:40',
+            'code' => 'required|min:1|max:10|unique:categories,code',
+            'name' => 'required|min:4|max:40',
+            'name_en' => 'required|min:4|max:40',
             'description' => 'required|min:4|max:255',
+            'description_en' => 'required|min:4|max:255',
         ];
 
-        if($this->route()->named('categories.update')){
+        if ($this->route()->named('categories.update')) {
             $rules['code'] .= ',' . $this->route()->parameter('category')->id;
         }
 
@@ -39,14 +41,14 @@ class CategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'required'             => 'Поле обязательно для заполнения!',
-            'min'                  => 'Поле должно иметь минимум :min символа',
-            'max'                  => 'Поле должно иметь максимум :max символов',
-            'numeric'              => 'Поле должно содержать только цифры',
-            'code.required'        => 'Поле "код" обязательно для заполнения!',
-            'name.required'        => 'Поле "название" обязательно для заполнения!',
+            'required' => 'Поле обязательно для заполнения!',
+            'min' => 'Поле должно иметь минимум :min символа',
+            'max' => 'Поле должно иметь максимум :max символов',
+            'numeric' => 'Поле должно содержать только цифры',
+            'code.required' => 'Поле "код" обязательно для заполнения!',
+            'name.required' => 'Поле "название" обязательно для заполнения!',
             'description.required' => 'Поле "описание" обязательно для заполнения!',
-            'unique'               => 'Категория с этим кодом уже зарегистрирована',
+            'unique' => 'Категория с этим кодом уже зарегистрирована',
         ];
     }
 }

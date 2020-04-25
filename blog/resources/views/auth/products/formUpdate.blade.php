@@ -26,6 +26,14 @@
                 @include('auth.layout.error', ['fieldName' => 'name'])
                 <br>
                 <div class="input-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Название_Eng: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="name_en" id="name_en" value="{{ $product->name_en }}">
+                    </div>
+                </div>
+                @include('auth.layout.error', ['fieldName' => 'name_en'])
+                <br>
+                <div class="input-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">Категория: </label>
                     <div class="col-sm-6">
                         <select name="category_id" id="category_id" class="form-control">
@@ -45,6 +53,15 @@
                     </div>
                 </div>
                 @include('auth.layout.error', ['fieldName' => 'description'])
+                <br>
+                <div class="input-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Описание_Eng: </label>
+                    <div class="col-sm-6">
+                        <textarea name="description_en" id="description_en" cols="72"
+                                  rows="7">{{ $product->description_en }}</textarea>
+                    </div>
+                </div>
+                @include('auth.layout.error', ['fieldName' => 'description_en'])
                 <br>
                 <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>

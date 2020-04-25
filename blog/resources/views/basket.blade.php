@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('style', 'basket')
-@section('title', 'Корзина')
+@section('title', __('basket.basket'))
 
 @section('content')
     @if(session()->has('success'))
@@ -9,16 +9,17 @@
     @if(session()->has('warning'))
         <p class="alert alert-warning">{{ session()->get('warning') }}</p>
     @endif
-    <h1>Корзина</h1>
-    <p>Оформление заказа</p>
+
+    <h1>@lang('basket.basket')</h1>
+    <p>@lang('basket.placing_order')</p>
     <div class="panel">
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Название</th>
-                <th>Кол-во</th>
-                <th>Цена</th>
-                <th>Стоимость</th>
+                <th>@lang('basket.title')</th>
+                <th>@lang('basket.amount')</th>
+                <th>@lang('basket.price')</th>
+                <th>@lang('basket.cost')</th>
             </tr>
             </thead>
             <tbody>
@@ -27,7 +28,7 @@
                     <td>
                         <a href="{{ route('product', [$product->category->code, $product->code]) }}">
                             <img height="56px" src="{{ Storage::url($product->image) }}">
-                            {{ $product->name }}
+                            {{ $product->__('name') }}
                         </a>
                     </td>
                     <td>
@@ -47,20 +48,21 @@
                             </form>
                         </div>
                     </td>
-                    <td>{{ $product->price }} руб.</td>
-                    <td>{{ $product->getPriceForCount() }} руб.</td>
+                    <td>{{ $product->price }} ₽</td>
+                    <td>{{ $product->getPriceForCount() }} ₽</td>
                 </tr>
             @endforeach
             <tr>
-                <td colspan="3">Общая стоимость:</td>
-                <td>{{ $order->getFullPrice() }} руб.</td>
+                <td colspan="3">@lang('basket.cost'):</td>
+                <td>{{ $order->getFullPrice() }} ₽</td>
             </tr>
 
             </tbody>
         </table>
         <br>
         <div class="btn-group pull-right" role="group">
-            <a type="button" class="btn btn-success" href="{{ route('basket-place') }}">Оформить заказ</a>
+            <a type="button" class="btn btn-success"
+               href="{{ route('basket-place') }}">@lang('basket.placing_order')</a>
         </div>
     </div>
 @endsection

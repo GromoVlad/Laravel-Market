@@ -96,6 +96,6 @@ class Basket
                 $pivotRow->update();
             }
         }
-        session()->flash('warning', 'Удален товар ' . $product->name);
+        session()->flash('warning', __('main.deleted_item') . '"' . $product->__('name') . '"');
     }
 }

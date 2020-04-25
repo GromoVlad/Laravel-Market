@@ -2,11 +2,14 @@
 
 namespace App\Model;
 
+use App\Model\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
 class Order extends Model
 {
+    use Translatable;
+
     protected $fillable = ['user_id'];
 
     public function products()

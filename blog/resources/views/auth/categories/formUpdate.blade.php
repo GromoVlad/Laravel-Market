@@ -30,6 +30,16 @@
                 @enderror
                 <br>
                 <div class="input-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Название_Eng: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="name_en" id="name_en" value="{{ $category->name_en }}">
+                    </div>
+                </div>
+                @error('name_en')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
+                <br>
+                <div class="input-group row">
                     <label for="description" class="col-sm-2 col-form-label">Описание: </label>
                     <div class="col-sm-6">
                         <textarea name="description" id="description" cols="72"
@@ -37,6 +47,17 @@
                     </div>
                 </div>
                 @error('description')
+                <div class="alert alert-danger margin-top">{{$message}}</div>
+                @enderror
+                <br>
+                <div class="input-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Описание_Eng: </label>
+                    <div class="col-sm-6">
+                        <textarea name="description_en" id="description_en" cols="72"
+                                  rows="7">{{ $category->description_en }}</textarea>
+                    </div>
+                </div>
+                @error('description_en')
                 <div class="alert alert-danger margin-top">{{$message}}</div>
                 @enderror
                 <br>

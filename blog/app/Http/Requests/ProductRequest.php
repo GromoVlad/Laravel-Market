@@ -25,14 +25,16 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'code'        => 'required|min:1|max:40|unique:products,code',
-            'name'        => 'required|min:4|max:40',
+            'code' => 'required|min:1|max:40|unique:products,code',
+            'name' => 'required|min:4|max:40',
             'description' => 'required|min:4|max:255',
-            'price'       => 'required|numeric|min:1',
-            'count'       => 'required|numeric|min:0',
+            'name_en' => 'required|min:4|max:40',
+            'description_en' => 'required|min:4|max:255',
+            'price' => 'required|numeric|min:1',
+            'count' => 'required|numeric|min:0',
         ];
 
-        if($this->route()->named('products.update')){
+        if ($this->route()->named('products.update')) {
             $rules['code'] .= ',' . $this->route()->parameter('product')->id;
         }
 
@@ -43,15 +45,15 @@ class ProductRequest extends FormRequest
     public function messages()
     {
         return [
-            'required'             => 'Поле обязательно для заполнения!',
-            'min'                  => 'Поле должно иметь минимум :min символа',
-            'max'                  => 'Поле должно иметь максимум :max символов',
-            'numeric'              => 'Поле должно содержать только цифры',
-            'code.required'        => 'Поле "код" обязательно для заполнения!',
-            'name.required'        => 'Поле "название" обязательно для заполнения!',
+            'required' => 'Поле обязательно для заполнения!',
+            'min' => 'Поле должно иметь минимум :min символа',
+            'max' => 'Поле должно иметь максимум :max символов',
+            'numeric' => 'Поле должно содержать только цифры',
+            'code.required' => 'Поле "код" обязательно для заполнения!',
+            'name.required' => 'Поле "название" обязательно для заполнения!',
             'description.required' => 'Поле "описание" обязательно для заполнения!',
-            'price.required'       => 'Поле "цена" обязательно для заполнения!',
-            'unique'               => 'Продукт с этим кодом уже зарегистрирован',
+            'price.required' => 'Поле "цена" обязательно для заполнения!',
+            'unique' => 'Продукт с этим кодом уже зарегистрирован',
         ];
     }
 }

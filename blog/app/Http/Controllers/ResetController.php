@@ -19,7 +19,9 @@ class ResetController extends Controller
                 Storage::put($file, Storage::disk('reset')->get($file));
             }
         }
-        session()->flash('success', 'Проект был сброшен в начальное состояние');
+
+        session()->flash('success', __('main.reset_complete'));
+
         return redirect()->route('index');
     }
 }
