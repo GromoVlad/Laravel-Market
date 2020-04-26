@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/blog/resources/css/bootstrap.css">
     <link rel="stylesheet" href="/blog/resources/css/@yield('style').css">
+    <script href="/blog/resources/js/bootstrap.js"></script>
+    <script href="/blog/resources/js/jquery-3.5.0.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +26,11 @@
                     <li><a href="{{ route('reset') }}">@lang('main.reset')</a></li>
                 @endisAdmin
                 <li><a href="{{ route('locale', __('main.set_lang')) }}">@lang('main.language'): @lang('main.set_lang')</a></li>
+                @foreach(App\Services\CurrencyConversion::getCurrencies() as $currency)
+                    <li>
+                        <a class="currency" href="{{ route('currency', $currency->code) }}">{{ $currency->symbol }}</a>
+                    </li>
+                @endforeach
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @guest
@@ -32,10 +39,10 @@
 
                 @auth
                     @isAdmin
-                        <li><a href="{{ route('admin-order') }}">@lang('main.admin')</a></li>
-                        <li><a href="{{ route('person-order') }}">@lang('main.profile')</a></li>
-                    @else
-                        <li><a href="{{ route('person-order') }}">@lang('main.profile')</a></li>
+                    <li><a href="{{ route('admin-order') }}">@lang('main.admin')</a></li>
+                    <li><a href="{{ route('person-order') }}">@lang('main.profile')</a></li>
+                @else
+                    <li><a href="{{ route('person-order') }}">@lang('main.profile')</a></li>
                     @endisAdmin
                     <li><a href="{{ route('get-logout') }}">@lang('main.logout')</a></li>
                 @endauth
@@ -43,6 +50,8 @@
         </div>
     </div>
 </nav>
+
+
 <div class="container">
     <div class="starter-template">
         @yield('content')

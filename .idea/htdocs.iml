@@ -12,13 +12,19 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/jsonlint" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/phar-utils" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/symfony/filesystem" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@popperjs" level="application" />
   </component>
 </module>

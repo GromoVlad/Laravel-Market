@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SubscriptionRequest;
+use App\Model\Currency;
 use App\Model\Subscription;
 use App\Model\Category;
 use App\Model\Product;
 use App\Http\Requests\ProductsFilterRequest;
+use App\Services\CurrencyRates;
 use Illuminate\Support\Facades\App;
 
 class MainController extends Controller
@@ -71,4 +73,10 @@ class MainController extends Controller
         return redirect()->back();
     }
 
+    public function changeCurrency($currencyCode)
+    {
+        $currency = Currency::byCode($currencyCode)->firstOrFail();
+        session(['currency' => $currency->code]);
+        return redirect()->back();
+    }
 }

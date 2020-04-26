@@ -106,6 +106,11 @@
       <path value="$PROJECT_DIR$/blog/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/blog/vendor/barryvdh/reflection-docblock" />
       <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/blog/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/blog/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -11,7 +11,7 @@
     @endif
     <h1>{{$product->__('name')}}</h1>
     <h2>{{$product->category->__('name')}}</h2>
-    <p>@lang('basket.price'): <b>{{$product->price}} ₽</b></p>
+    <p>@lang('basket.price'): <b>{{$product->price}}  {!! App\Services\CurrencyConversion::getCurrencySymbol() !!}</b></p>
     <img src="{{ Storage::url($product->image) }}" alt="{{$product->name}}">
     <p>{{$product->__('description')}}</p>
     @if($product->isAvailable())

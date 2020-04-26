@@ -29,13 +29,13 @@
                                     </a>
                                 </td>
                                 <td>{{ $product->pivot->count }}</td>
-                                <td>{{ $product->price }} руб.</td>
-                                <td>{{ $product->getPriceForCount()}} ₽</td>
+                                <td>{{ $product->price }} {{ App\Services\CurrencyConversion::getCurrencySymbol() }}</td>
+                                <td>{{ $product->getPriceForCount()}}  {{ App\Services\CurrencyConversion::getCurrencySymbol() }}</td>
                             </tr>
                         @endforeach
                         <tr>
                             <td colspan="3"><h3>@lang('order.total_cost'):</h3></td>
-                            <td><h5>{{ $order->getFullPrice() }} ₽</h5></td>
+                            <td><h5>{{ $order->getFullPrice() }}  {{ App\Services\CurrencyConversion::getCurrencySymbol() }}</h5></td>
                         </tr>
                         </tbody>
                     </table>
