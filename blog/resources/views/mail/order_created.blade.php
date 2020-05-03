@@ -18,7 +18,7 @@
                 <img height="56px" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
                 {{ $product->name }}
             </td>
-            <td><span class="badge">{{$product->pivot->count}}</span></td>
+            <td><span class="badge">{{$product->countInOrder}}</span></td>
             <td>{{ $product->price }} руб.</td>
             <td>{{ $product->getPriceForCount() }} руб.</td>
         </tr>

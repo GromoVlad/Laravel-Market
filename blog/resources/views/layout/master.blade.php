@@ -23,10 +23,11 @@
                 <li @routeactive('categor*')><a href="{{ route('categories') }}">@lang('main.category')</a></li>
                 <li @routeactive('basket*')><a href="{{ route('basket') }}">@lang('main.basket')</a></li>
                 @isAdmin
-                    <li><a href="{{ route('reset') }}">@lang('main.reset')</a></li>
+                <li><a href="{{ route('reset') }}">@lang('main.reset')</a></li>
                 @endisAdmin
-                <li><a href="{{ route('locale', __('main.set_lang')) }}">@lang('main.language'): @lang('main.set_lang')</a></li>
-                @foreach(App\Services\CurrencyConversion::getCurrencies() as $currency)
+                <li><a href="{{ route('locale', __('main.set_lang')) }}">@lang('main.language')
+                        : @lang('main.set_lang')</a></li>
+                @foreach($currencies as $currency)
                     <li>
                         <a class="currency" href="{{ route('currency', $currency->code) }}">{{ $currency->symbol }}</a>
                     </li>
@@ -52,10 +53,35 @@
 </nav>
 
 
-<div class="container">
-    <div class="starter-template">
-        @yield('content')
+    <div class="container">
+        <div class="starter-template">
+            @yield('content')
+        </div>
     </div>
-</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6"><p>Категории товаров</p>
+                <ul>
+                    @foreach($categories as $category)
+                        <li><a href="{{ route('category', $category->code) }}">{{$category->__('name')}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="col-lg-6"><p>Самые популярные товары</p>
+                <ul>
+                    @foreach($bestProducts as $bestProduct)
+                        <li>
+                            <a href="{{ route('product', [$bestProduct->category->code, $bestProduct->code]) }}">{{ $bestProduct->__('name') }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

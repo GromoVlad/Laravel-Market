@@ -10,7 +10,7 @@ class CurrencyRates
     public static function getRates()
     {
         $baseCurrency = CurrencyConversion::getCurrency();
-        $url = 'https://api.exchangeratesapi.io/latest?base=' . $baseCurrency->code;
+        $url = config('currency_rates.api_url') . $baseCurrency->code;
         $client = new Client();
 
         $response = $client->request('GET', $url);

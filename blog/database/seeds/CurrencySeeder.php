@@ -18,18 +18,24 @@ class CurrencySeeder extends Seeder
                 'symbol' => '₽',
                 'is_main' => 1,
                 'rate' => 1,
+                'created_at' => date_create(),
+                'updated_at' => date_create(),
             ],
             [
                 'code' => 'USD',
                 'symbol' => '$',
                 'is_main' => 0,
                 'rate' => 0,
+                'created_at' => date_create(),
+                'updated_at' => date_create(),
             ],
             [
                 'code' => 'EUR',
                 'symbol' => '€',
                 'is_main' => 0,
                 'rate' => 0,
+                'created_at' => date_create(),
+                'updated_at' => date_create(),
             ],
         ]);
     }

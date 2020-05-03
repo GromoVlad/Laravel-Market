@@ -10,11 +10,11 @@ class Order extends Model
 {
     use Translatable;
 
-    protected $fillable = ['user_id'];
+    protected $fillable = ['user_id', 'currency_id', 'sum'];
 
     public function products()
     {
-        return $this->belongsToMany(Product::class)->withPivot('count')->withTimestamps();
+        return $this->belongsToMany(Product::class)->withPivot('count', 'price')->withTimestamps();
     }
 
     public function scopeActiveOrders($query)
@@ -36,18 +36,37 @@ class Order extends Model
         return $sum;
     }
 
+    public function getFullSum()
+    {
+        $sum = 0;
+
+        foreach ($this->products as $product) {
+            $sum += $product->price * $product->countInOrder;
+        }
+
+        return $sum;
+    }
+
     public function saveOrder($name, $phone, $email)
     {
-        if ($this->status == 0) {
-            $this->name = $name;
-            $this->phone = $phone;
-            $this->email = $email;
-            $this->status = 1;
-            $this->save();
-            session()->forget('orderId');
-            return true;
-        } else {
-            return false;
+        $this->name = $name;
+        $this->phone = $phone;
+        $this->email = $email;
+        $this->status = 1;
+        $this->sum = $this->getFullSum();
+
+        $products = $this->products;
+
+        $this->save();
+
+        foreach ($products as $productInOrder) {
+            $this->products()->attach($productInOrder, [
+                'count' => $productInOrder->countInOrder,
+                'price' => $productInOrder->price,
+            ]);
         }
+
+        session()->forget('order');
+        return true;
     }
 }

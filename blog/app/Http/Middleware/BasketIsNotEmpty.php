@@ -10,19 +10,19 @@ class BasketIsNotEmpty
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
     {
-        $orderId = session('orderId');
-        if (!is_null($orderId)) {
-            $order = Order::findOrFail($orderId);
-            if($order->products->count() > 0){
-                return $next($request);
-            }
+        $order = session('order');
+        if (!is_null($order) && $order->getFullSum() > 0) {
+            return $next($request);
         }
+
+        session()->flush('order');
+
         session()->flash('warning', __('main.basket_empty'));
         return redirect()->route('index');
     }
