@@ -9,13 +9,18 @@
     @if(session()->has('warning'))
         <p class="alert alert-warning">{{ session()->get('warning') }}</p>
     @endif
-    <h1>{{$product->__('name')}}</h1>
-    <h2>{{$product->category->__('name')}}</h2>
-    <p>@lang('basket.price'): <b>{{$product->price}}  {{ $currencySymbol }}</b></p>
-    <img src="{{ Storage::url($product->image) }}" alt="{{$product->name}}">
-    <p>{{$product->__('description')}}</p>
-    @if($product->isAvailable())
-        <form action="{{ route('basket-add', $product->id) }}" method="POST">
+    <h1>{{$skus->product->__('name')}}</h1>
+    <h2>{{$skus->product->category->__('name')}}</h2>
+    @isset($skus->product->properties)
+        @foreach($skus->propertyOptions as $propertyOption)
+            <h4>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h4>
+        @endforeach
+    @endisset
+    <h3>@lang('basket.price'): <b>{{$skus->product->price}}  {{ $currencySymbol }}</b></h3>
+    <img src="{{ Storage::url($skus->product->image) }}" alt="{{$skus->product->name}}">
+    <p>{{$skus->product->__('description')}}</p>
+    @if($skus->isAvailable())
+        <form action="{{ route('basket-add', $skus->product->id) }}" method="POST">
             @csrf
             <button type="submit" class="btn btn-success" role="button">@lang('main.add_basket')</button>
         </form>
@@ -29,7 +34,7 @@
                *{!! $errors->get('email')[0] !!}
             @endif
         </span>
-        <form method="post" action="{{ route('subscription', $product) }}">
+        <form method="post" action="{{ route('subscription', $skus->product) }}">
             @csrf
             <input type="text" name="email">
             <button class="btn btn-success" type="submit">@lang('main.send')</button>

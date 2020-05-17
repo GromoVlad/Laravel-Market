@@ -32,6 +32,7 @@
                         <li><a href="{{ route('categories.index') }}">Категории</a></li>
                         <li><a href="{{ route('products.index') }}">Товары</a></li>
                         <li><a href="{{ route('admin-order') }}">Заказы</a></li>
+                        <li><a href="{{ route('properties.index') }}">Свойства</a></li>
                     @endisAdmin
                 </ul>
 

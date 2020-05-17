@@ -12,15 +12,15 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($order->products as $product)
+    @foreach($order->skus as $sku)
         <tr>
             <td>
-                <img height="56px" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
-                {{ $product->name }}
+                <img height="56px" src="{{ Storage::url($sku->product->image) }}">
+                {{ $sku->product->__('name') }}
             </td>
-            <td><span class="badge">{{$product->countInOrder}}</span></td>
-            <td>{{ $product->price }} руб.</td>
-            <td>{{ $product->getPriceForCount() }} руб.</td>
+            <td><span class="badge">{{$sku->countInOrder}}</span></td>
+            <td>{{ $sku->price }} руб.</td>
+            <td>{{ $sku->getPriceForCount() }} руб.</td>
         </tr>
     @endforeach
     <tr>

@@ -16,7 +16,7 @@ class CreateSubscriptionsTable extends Migration
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('email');
-            $table->integer('product_id');
+            $table->unsignedInteger('sku_id');
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

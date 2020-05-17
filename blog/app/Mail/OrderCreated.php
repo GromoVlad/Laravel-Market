@@ -14,22 +14,12 @@ class OrderCreated extends Mailable
     protected $name;
     protected $order;
 
-    /**
-     * OrderCreated constructor.
-     * @param $name
-     * @param Order $order
-     */
     public function __construct($name, Order $order)
     {
         $this->name = $name;
         $this->order = $order;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
         $fullSum = $this->order->getFullPrice();

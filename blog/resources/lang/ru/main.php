@@ -34,4 +34,6 @@ return [
     'product'           => 'Товар ',
     'not_more'          => ' не доступен в большем количестве!',
     'basket_empty'      => 'Ваша корзина пуста',
+    'product_categories'=> 'Категории товаров',
+    'popular_products'  => 'Самые популярные товары',
 ];

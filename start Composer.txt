@@ -1,18 +1,12 @@
 Путь:  		C:\Server\data\htdocs\blog
-Адрес: 	
-	http://127.0.0.1:8000
+Адрес: 		http://127.0.0.1:8000
 
-
-CodeSniffer:	
-Ctrl+Alt+L
+CodeSniffer:	Ctrl+Alt+L
 
 ******************************************************************
 *****         Запуск php файла и composera исходник:         *****
 ******************************************************************
 C:\Server\bin\PHP\php.exe composer.phar
-
-
-
 
 **************************************************************
 *****			Запуск artisan:			******
@@ -22,21 +16,25 @@ C:\Server\bin\PHP\php.exe artisan
 ***********************************************************************
 *****                   Установить новый проект                   *****
 ***********************************************************************
+php composer.phar create-project laravel/laravel <Название проекта>
 C:\Server\bin\PHP\php.exe composer.phar create-project laravel/laravel <Название проекта>
 
 ***********************************************************************
 **    Установить debugbar (в папке, где находится composer.json)     **
 ***********************************************************************
+php composer.phar require barryvdh/laravel-debugbar --dev
 C:\Server\bin\PHP\php.exe composer.phar require barryvdh/laravel-debugbar --dev
 
 **************************************************************
 **     Создаем контроллер с именем класса CreatePlaces:     **
 **************************************************************
+php artisan make:controller CreatePlaces
 C:\Server\bin\PHP\php.exe artisan make:controller CreatePlaces
 
 ***************************************************************************
 *****     Обновить папку vendor, подтянет данные из composer.json     *****
 ***************************************************************************
+php composer.phar update
 C:\Server\bin\PHP\php.exe composer.phar update
 
 ***************************************************************************
@@ -44,6 +42,12 @@ C:\Server\bin\PHP\php.exe composer.phar update
 ***************************************************************************
 1) C:\Server\bin\PHP\php.exe composer.phar require laravel/ui
 2) C:\Server\bin\PHP\php.exe artisan ui vue —auth
+
+***************************************************************************
+*****   Вывести список роутов, с методами, URI, Action, Middleware    *****
+***************************************************************************
+php artisan route:list
+C:\Server\bin\PHP\php.exe artisan route:list
 
 ****************************************************
 *****             Команды Artisan:             *****

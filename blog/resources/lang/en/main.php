@@ -34,4 +34,6 @@ return [
     'product'           => 'Product ',
     'not_more'          => ' not available in more',
     'basket_empty'      => 'Your basket is empty',
+    'product_categories'=> 'Product Categories',
+    'popular_products'  => 'Most Popular Products',
 ];

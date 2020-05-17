@@ -20,17 +20,17 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($skus as $sku)
                             <tr>
                                 <td>
-                                    <a href="{{ route('product', [$product->category->code, $product->code] ) }}">
-                                        <img height="56px" src="{{ Storage::url($product->image) }}">
-                                        {{ $product->__('name') }}
+                                    <a href="{{ route('sku', [$sku->product->category->code, $sku->product->code, $sku] ) }}">
+                                        <img height="56px" src="{{ Storage::url($sku->product->image) }}">
+                                        {{ $sku->product->__('name') }}
                                     </a>
                                 </td>
-                                <td>{{ $product->pivot->count }}</td>
-                                <td>{{ $product->pivot->price }} {{ $currencySymbol }}</td>
-                                <td>{{ $product->pivot->price * $product->pivot->count}}  {{ $currencySymbol }}</td>
+                                <td>{{ $sku->pivot->count }}</td>
+                                <td>{{ $sku->pivot->price }} {{ $currencySymbol }}</td>
+                                <td>{{ $sku->pivot->price * $sku->pivot->count}}  {{ $currencySymbol }}</td>
                             </tr>
                         @endforeach
                         <tr>

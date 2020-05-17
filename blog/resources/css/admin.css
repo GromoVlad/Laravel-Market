@@ -3,12 +3,16 @@ div.input-group select.form-control {
 }
 
 ul.navbar-nav{
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
 }
 ul.navbar-nav li{
-   margin: 0 2rem;
+   margin: 0 1rem;
+}
+
+ul.navbar-right{
+    width: 30%;
 }
 
 .margin-top{

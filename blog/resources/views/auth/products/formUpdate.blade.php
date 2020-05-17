@@ -64,6 +64,17 @@
                 @include('auth.layout.error', ['fieldName' => 'description_en'])
                 <br>
                 <div class="input-group row">
+                    <label for="category_id" class="col-sm-2 col-form-label">Свойства: </label>
+                    <div class="col-sm-6">
+                        <select name="property_id[]"  multiple>
+                            @foreach($properties as $property)
+                                <option value="{{$property->id}}">{{$property->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                @include('auth.layout.error', ['fieldName' => 'property_id'])
+                <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
                     <div class="col-sm-10">
                         <label class="btn btn-default btn-file">
@@ -71,22 +82,6 @@
                         </label>
                     </div>
                 </div>
-                <br>
-                <div class="input-group row">
-                    <label for="price" class="col-sm-2 col-form-label">Цена: </label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" name="price" id="price" value="{{ $product->price }}">
-                    </div>
-                </div>
-                @include('auth.layout.error', ['fieldName' => 'price'])
-                <br>
-                <div class="input-group row">
-                    <label for="count" class="col-sm-2 col-form-label">Количество: </label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" name="count" id="count" value="{{ $product->count }}">
-                    </div>
-                </div>
-                @include('auth.layout.error', ['fieldName' => 'count'])
                 <br>
                 @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
                     <div class="input-group row">

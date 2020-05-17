@@ -52,29 +52,29 @@
     </div>
 </nav>
 
-
-    <div class="container">
-        <div class="starter-template">
-            @yield('content')
-        </div>
+<div class="container">
+    <div class="starter-template">
+        @yield('content')
     </div>
-
+</div>
 
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6"><p>Категории товаров</p>
+            <div class="col-lg-6"><p>@lang('main.product_categories')</p>
                 <ul>
                     @foreach($categories as $category)
                         <li><a href="{{ route('category', $category->code) }}">{{$category->__('name')}}</a></li>
                     @endforeach
                 </ul>
             </div>
-            <div class="col-lg-6"><p>Самые популярные товары</p>
+            <div class="col-lg-6"><p>@lang('main.popular_products')</p>
                 <ul>
-                    @foreach($bestProducts as $bestProduct)
+                    @foreach($bestSkus as $bestSku)
                         <li>
-                            <a href="{{ route('product', [$bestProduct->category->code, $bestProduct->code]) }}">{{ $bestProduct->__('name') }}</a>
+                            <a href="{{ route('sku', [$bestSku->product->category->code, $bestSku->product->code, $bestSku]) }}">
+                                {{ $bestSku->product->__('name') }}
+                            </a>
                         </li>
                     @endforeach
                 </ul>

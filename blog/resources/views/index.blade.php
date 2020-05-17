@@ -47,9 +47,9 @@
     </form>
     <br>
     <div class="row">
-        @foreach($products as $product)
-            @include('layout.cart', compact($product))
+        @foreach($skus as $sku)
+            @include('layout.cart', compact('sku'))
         @endforeach
     </div>
-    {{$products->links()}}
+    {{$skus->links()}}
 @endsection

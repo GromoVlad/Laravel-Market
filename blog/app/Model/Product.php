@@ -31,12 +31,14 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function getPriceForCount()
+    public function skus()
     {
-        if (!is_null($this->pivot)) {
-            return $this->pivot->count * $this->price;
-        }
-        return $this->price;
+        return $this->hasMany(Sku::class);
+    }
+
+    public function properties()
+    {
+        return $this->belongsToMany(Property::class, 'property_product')->withTimestamps();
     }
 
     public function scopeNew($query)
@@ -52,11 +54,6 @@ class Product extends Model
     public function scopeRecommend($query)
     {
         return $query->where('recommend', 1);
-    }
-
-    public function isAvailable()
-    {
-        return !$this->trashed() && $this->count > 0;
     }
 
     public function isNew()

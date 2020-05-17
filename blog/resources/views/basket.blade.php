@@ -23,24 +23,24 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($order->products as $product)
+            @foreach($order->skus as $sku)
                 <tr>
                     <td>
-                        <a href="{{ route('product', [$product->category->code, $product->code]) }}">
-                            <img height="56px" src="{{ Storage::url($product->image) }}">
-                            {{ $product->__('name') }}
+                        <a href="{{ route('sku', [$sku->product->category->code, $sku->product->code, $sku]) }}">
+                            <img height="56px" src="{{ Storage::url($sku->image) }}">
+                            {{ $sku->product->__('name') }}
                         </a>
                     </td>
                     <td>
-                        <span class="badge">{{$product->countInOrder}}</span>
+                        <span class="badge">{{$sku->countInOrder}}</span>
                         <div class="btn-group form-inline">
-                            <form action="{{ route('basket-remove', $product->id) }}" method="POST">
+                            <form action="{{ route('basket-remove', $sku->id) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-danger" href="">
                                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                 </button>
                             </form>
-                            <form action="{{ route('basket-add', $product->id) }}" method="POST">
+                            <form action="{{ route('basket-add', $sku->id) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-success" href="">
                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -48,15 +48,14 @@
                             </form>
                         </div>
                     </td>
-                    <td>{{ $product->price }}  {{ $currencySymbol }}</td>
-                    <td>{{ $product->price * $product->countInOrder }}  {{ $currencySymbol }}</td>
+                    <td>{{ $sku->price }}  {{ $currencySymbol }}</td>
+                    <td>{{ $sku->price * $sku->countInOrder }}  {{ $currencySymbol }}</td>
                 </tr>
             @endforeach
             <tr>
                 <td colspan="3">@lang('basket.cost'):</td>
                 <td>{{ $order->getFullSum() }}  {{ $currencySymbol }}</td>
             </tr>
-
             </tbody>
         </table>
         <br>
