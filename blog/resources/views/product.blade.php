@@ -9,14 +9,13 @@
     @if(session()->has('warning'))
         <p class="alert alert-warning">{{ session()->get('warning') }}</p>
     @endif
-    <h1>{{$skus->product->__('name')}}</h1>
-    <h2>{{$skus->product->category->__('name')}}</h2>
+    <h2>{{$skus->product->__('name')}}</h2>
     @isset($skus->product->properties)
         @foreach($skus->propertyOptions as $propertyOption)
             <h4>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h4>
         @endforeach
     @endisset
-    <h3>@lang('basket.price'): <b>{{$skus->product->price}}  {{ $currencySymbol }}</b></h3>
+    <h4>@lang('basket.price'): <b>{{$skus->price}}  {{ $currencySymbol }}</b></h4>
     <img src="{{ Storage::url($skus->product->image) }}" alt="{{$skus->product->name}}">
     <p>{{$skus->product->__('description')}}</p>
     @if($skus->isAvailable())

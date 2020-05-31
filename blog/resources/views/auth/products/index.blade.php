@@ -19,7 +19,7 @@
                     <td>{{ $product->code }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->category->name }}</td>
-                    <td></td>
+                    <td style="text-align: center">{{ count($product->skus) }}</td>
                     <td>
                         <div class="btn-group" role="group">
                             <a class="btn btn-success" type="button"

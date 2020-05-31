@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePropertyOptionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('property_options', function (Blueprint $table) {
@@ -21,13 +16,10 @@ class CreatePropertyOptionsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        (new PropertyOptionsSeeder())->run();
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('property_options');

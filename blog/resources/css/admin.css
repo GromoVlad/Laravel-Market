@@ -42,3 +42,16 @@ div.container {
 footer {
     flex: 0 0 auto;
 }
+
+label.label_checkbox{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    margin: 0 10px;
+}
+
+label.label_checkbox input{
+    width: 20px;
+    margin: 0 5px;
+}

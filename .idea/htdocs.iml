@@ -12,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/guzzlehttp/psr7" />
@@ -22,6 +23,7 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/jsonlint" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/seld/phar-utils" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/symfony/polyfill-php80" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePropertyProductTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('property_product', function (Blueprint $table) {
@@ -19,13 +14,10 @@ class CreatePropertyProductTable extends Migration
             $table->unsignedSmallInteger('property_id');
             $table->timestamps();
         });
+
+        (new PropertyProductSeeder())->run();
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('property_product');

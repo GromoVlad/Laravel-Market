@@ -46,7 +46,7 @@
         </div>
     </form>
     <br>
-    <div class="row">
+    <div class="product">
         @foreach($skus as $sku)
             @include('layout.cart', compact('sku'))
         @endforeach

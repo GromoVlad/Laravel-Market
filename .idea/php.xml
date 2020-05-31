@@ -11,7 +11,6 @@
       <path value="$PROJECT_DIR$/blog/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/blog/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/blog/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/blog/vendor/league/commonmark-ext-table" />
       <path value="$PROJECT_DIR$/blog/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/blog/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/blog/vendor/nunomaduro/collision" />
@@ -22,7 +21,6 @@
       <path value="$PROJECT_DIR$/blog/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/blog/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/blog/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/blog/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/blog/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/blog/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/blog/vendor/psr/container" />
@@ -111,6 +109,8 @@
       <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/blog/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/blog/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/blog/vendor/egulias/email-validator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

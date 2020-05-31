@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSkuPropertyOptionTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('sku_property_option', function (Blueprint $table) {
@@ -19,13 +14,10 @@ class CreateSkuPropertyOptionTable extends Migration
             $table->unsignedSmallInteger('sku_id');
             $table->timestamps();
         });
+
+        (new SkuPropertyOptionSeeder())->run();
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('sku_property_option');

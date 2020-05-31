@@ -1,5 +1,6 @@
 body {
     padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .starter-template {
@@ -86,4 +87,27 @@ div.container {
 }
 footer {
     flex: 0 0 auto;
+}
+div.product{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5%;
+    width: 100%;
+}
+div.card{
+    height: 100%;
+}
+div.thumbnail{
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+div.caption{
+    flex: 1;
+}
+div.two_buttons{
+    padding-bottom: 3%;
+}
+div.thumbnail div.caption{
+    padding-bottom: 0;
 }

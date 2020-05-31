@@ -1,10 +1,8 @@
 @extends('auth.layout.master')
-
-@section('title', 'Редактировать товар ' . $product->name)
-
+@section('title', 'Редактировать товар: ' . $product->name)
 @section('content')
     <div class="col-md-12">
-        <h1>Редактировать товар <b>{{ $product->name }}</b></h1>
+        <h1>Редактировать товар: <b>"{{ $product->name }}"</b></h1>
         <form method="POST" enctype="multipart/form-data" action="{{ route('products.update', $product) }}">
             <div>
                 @method('PUT')
@@ -28,7 +26,8 @@
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название_Eng: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name_en" id="name_en" value="{{ $product->name_en }}">
+                        <input type="text" class="form-control" name="name_en" id="name_en"
+                               value="{{ $product->name_en }}">
                     </div>
                 </div>
                 @include('auth.layout.error', ['fieldName' => 'name_en'])
@@ -64,17 +63,6 @@
                 @include('auth.layout.error', ['fieldName' => 'description_en'])
                 <br>
                 <div class="input-group row">
-                    <label for="category_id" class="col-sm-2 col-form-label">Свойства: </label>
-                    <div class="col-sm-6">
-                        <select name="property_id[]"  multiple>
-                            @foreach($properties as $property)
-                                <option value="{{$property->id}}">{{$property->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                @include('auth.layout.error', ['fieldName' => 'property_id'])
-                <div class="input-group row">
                     <label for="image" class="col-sm-2 col-form-label">Картинка: </label>
                     <div class="col-sm-10">
                         <label class="btn btn-default btn-file">
@@ -83,20 +71,42 @@
                     </div>
                 </div>
                 <br>
-                @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
-                    <div class="input-group row">
-                        <label for="name" class="col-sm-2 col-form-label">{{$title}}</label>
-                        <div class="col-sm-1">
-                            <input type="checkbox" class="form-control" name="{{$field}}" id="{{$field}}"
-                                @if(isset($product) && $product->$field === 1)
-                                   checked
-                                @endif
-                            >
-                        </div>
+                <div class="input-group row">
+                    <label class="col-sm-2 col-form-label">Свойства: </label>
+                    <div class="col-sm-10">
+                        @foreach($properties as $property)
+                            <label class="label_checkbox">
+                                {{$property->name}}
+                                <input class="" type='checkbox' name='property_id[]' value='{{$property->id}}'
+                                    @foreach($product->properties->map->id as $propertyId)
+                                        @if ($propertyId === $property->id)
+                                            checked
+                                        @endif
+                                    @endforeach
+                                >
+                            </label>
+                        @endforeach
                     </div>
-                    <br>
-                    @include('auth.layout.error', ['fieldName' => $field])
-                @endforeach
+                </div>
+                <br>
+                @include('auth.layout.error', ['fieldName' => 'property_id'])
+                <div class="input-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Сортировка</label>
+                    <div class="col-sm-10">
+                        @foreach(['new' => 'Новинка', 'hit' => 'Хит', 'recommend' => 'Рекомендуемый'] as $field => $title)
+                            <label class="label_checkbox">
+                                {{$title}}
+                                <input type="checkbox" class="form-control" name="{{$field}}" id="{{$field}}"
+                                       @if(isset($product) && $product->$field === 1)
+                                       checked
+                                    @endif
+                                >
+                            </label>
+                        @endforeach
+                    </div>
+                </div>
+                <br>
+                @include('auth.layout.error', ['fieldName' => $field])
                 <button class="btn btn-success">Сохранить</button>
             </div>
         </form>

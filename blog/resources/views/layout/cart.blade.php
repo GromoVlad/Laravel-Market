@@ -1,4 +1,4 @@
-<div class="col-sm-6 col-md-4">
+<div class="card">
     <div class="thumbnail">
         <div class="labels">
             @if($sku->product->isNew())
@@ -16,22 +16,23 @@
             <h3>{{ $sku->product->__('name') }}</h3>
             @isset($sku->product->properties)
                 @foreach($sku->propertyOptions as $propertyOption)
-                    <h4>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h4>
+                    <h5>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h5>
                 @endforeach
             @endisset
-            <p>{{ $sku->price }} {{ $currencySymbol }}</p>
-            <div class="two_buttons">
-                <form action="{{ route('basket-add', $sku) }}" method="POST">
-                    @csrf
-                    @if($sku->isAvailable())
-                        <button type="submit" class="btn btn-info" role="button">@lang('main.add_basket')</button>
-                    @else
-                        <button disabled class="btn btn-secondary" role="button">@lang('main.not_available')</button>
-                    @endif
-                </form>
-                <a href="{{ route('sku', [isset($category) ? $category->code : $sku->product->category->code, $sku->product->code, $sku->id]) }}"
-                   class="btn btn-default" role="button">@lang('main.more_about')</a>
-            </div>
+            <h4><b>{{ number_format ($sku->price , 0 , "." , " " ) }} {{ $currencySymbol }}</b></h4>
+            <h5>Количество: {{ $sku->count }}</h5>
+        </div>
+        <div class="two_buttons">
+            <form action="{{ route('basket-add', $sku) }}" method="POST">
+                @csrf
+                @if($sku->isAvailable())
+                    <button type="submit" class="btn btn-info" role="button">@lang('main.add_basket')</button>
+                @else
+                    <button disabled class="btn btn-secondary" role="button">@lang('main.not_available')</button>
+                @endif
+            </form>
+            <a href="{{ route('sku', [isset($category) ? $category->code : $sku->product->category->code, $sku->product->code, $sku->id]) }}"
+               class="btn btn-default" role="button">@lang('main.more_about')</a>
         </div>
     </div>
 </div>
